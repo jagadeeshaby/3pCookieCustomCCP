@@ -1,0 +1,22 @@
+iframe{
+    border: 0;
+}
+
+
+body{
+    margin: 15px;
+}
+
+
+#container-div{
+    border: 1px solid;
+    margin-top: 20px;
+}
+
+#agent-status{
+    text-align: right;
+}
+
+#rsaModal .modal-content{
+    height: 350px;
+}
