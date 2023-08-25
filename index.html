@@ -15,14 +15,16 @@
 </head>
 
 <body>
-
     <div class="container-fluid">
         <div class="alert alert-success" role="alert">
             <h4 class="alert-heading">Welcome to Custom CCP Website!</h4>
 
             <p>Use this website for testing custom CCP. You can provide CCP URL and paramters details in the input boxes
                 below to customize</p>
-               <strong> Make sure this application URL - https://d33ithtu9f4k36.cloudfront.net is allow listed in your Connect instance application integration section. <a href="https://docs.aws.amazon.com/connect/latest/adminguide/app-integration.html"> Learn more</a></strong>
+            <strong> Make sure this application URL - <span id="origin"></span> is allow listed in your Connect instance
+                application integration section. <a
+                    href="https://docs.aws.amazon.com/connect/latest/adminguide/app-integration.html"> Learn
+                    more</a></strong>
 
         </div>
 
@@ -33,24 +35,23 @@
                 <form id="inputForm">
                     <div class="form-group">
                         <label for="ccpUrl">Contact Control Panel URL</label>
-                        <input type="text" id="ccpUrl" class="form-control" required name="ccpUrl" aria-describedby="ccpUrlHelp"
-                            placeholder="Enter ccpUrl">
-                        <small id="ccpUrlHelp" class="form-text text-muted">https://<alias>.my.connect.aws/ccp-v2 or
-                                https://
-                                <alias>
-                                    .awsapps.com/connect/ccp-v2</small>
+                        <input type="text" id="ccpUrl" class="form-control" required name="ccpUrl"
+                            aria-describedby="ccpUrlHelp" placeholder="Enter ccpUrl">
+                        <small id="ccpUrlHelp" class="form-text text-muted">
+                            https://<alias>.my.connect.aws/ccp-v2 or https://<alias>.awsapps.com/connect/ccp-v2
+                            </small>
                     </div>
 
                     <div class="form-group">
                         <label for="additionalParams">CCP params</label>
-                        <textarea id="ccpParams" class="form-control" name="ccpParams" rows="10"></textarea>
+                        <textarea id="ccpParams" class="form-control" name="ccpParams" rows="15"></textarea>
                     </div>
 
                     <div class="button-group">
                         <button type="submit" id="submit" class="btn btn-primary">
                             Load Custom CCP
                         </button>
-                    
+
                     </div>
                 </form>
 
@@ -72,7 +73,7 @@
                     <button id="loadAgentInfo" type="button" class="btn btn-info"> Load Agent Info</button>
                 </div>
 
-                <div class="container-fluid" id="container-div" style="width: 100%;height:460px;">
+                <div id="container-div" style="width: 100%;height:460px;">
 
                 </div>
             </div>
@@ -105,8 +106,7 @@
 
 
         <!-- Modal -->
-        <div class="modal fade" id="rsaModal" tabindex="-1" role="dialog" aria-labelledby="rsaModal"
-            aria-hidden="true">
+        <div class="modal fade" id="rsaModal" tabindex="-1" role="dialog" aria-labelledby="rsaModal" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
